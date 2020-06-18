@@ -1,0 +1,55 @@
+.footer {
+
+    &__container {
+        padding: 10rem; 
+        display: flex;
+        
+    }
+    &__column1{
+        flex: 0 0 50%;
+        
+    }
+    &__column2{
+        flex: 0 0 50%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        div {
+            &:not(:last-child)  {
+                margin-bottom: 12rem;
+            }
+        }
+        .div {
+            a {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        &:hover {
+            opacity: 0.5;   
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 2rem;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    }
+   &__end {
+       margin-top: 8rem;
+       .strong {
+        font-size: 2rem;
+       }
+       .light {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+       }
+   }
+}

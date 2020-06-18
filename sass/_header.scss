@@ -1,0 +1,40 @@
+.header {
+       padding: 10rem;  
+       padding-left: 7.5rem;
+       padding-bottom: 0;
+    &__container {
+        display: flex;
+    }
+
+    &__heading {
+        flex: 0 0 50%;
+    }
+    &__img {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        right: 0;
+        top: -10rem;
+
+        img {
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            width: 45rem;
+        }
+
+        
+    }
+}
+
+.paragraph1 {
+    font-size: 2.5rem;
+}
+.paragraph2 {
+    font-size: 6rem;
+    line-height: 1.3;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}  

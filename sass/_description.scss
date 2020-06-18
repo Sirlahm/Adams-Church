@@ -1,0 +1,147 @@
+.description{
+
+    &__container{
+        padding:  0 10rem;
+        padding-bottom: 10rem;
+        position: relative;
+    }
+    &__content {
+  display: flex;
+    }
+    &__rotate {
+   
+    }
+  &__details {
+        flex: 1 0 0;
+        margin-left: -3rem;
+        display: flex;
+        flex-direction: column;
+    }
+   &__text {
+       margin-bottom: 4rem;
+   
+   }
+   &__item{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+
+       &:not(:last-child) {
+        margin-bottom: 5rem;
+       }
+   }
+   &__text2 {
+         margin: 0 5rem;
+
+    p {
+       font-size: 2rem;
+    }
+   }
+   &__img {
+
+    height: 100%;
+   /* width: 100%; */
+   width: 15rem;
+   object-fit: cover;
+   display: block;
+   }
+
+   &__image {
+    position: absolute;
+    left: 0;  
+    top: -10rem;
+img {
+       width: 17rem; 
+       height: 100%;
+       object-fit: cover; 
+       }
+   }
+
+   &__btn {
+      
+      
+   }
+   
+}
+.heading-3 {
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: 100% 0;
+    
+}
+.heading-1{
+    font-size: 4rem;
+}
+.heading-4{
+    font-size: 3rem;
+}
+.paragraph{
+    font-size: 2.2rem;
+}
+
+.btn-icon{
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    display: block;
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        transform: rotate(45deg);
+        background-color: #98ade9;
+        display: block;
+        transition: border-radius .3s ease;
+
+    }
+    &:hover::before {
+        border-radius: 0;
+    }
+    span {
+       
+        &::before {
+            content: "";
+            height: .2rem;
+            width: 4rem;
+            position: absolute;
+            display: inline-block;
+            background-color: $color-primary;
+            left: 0;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            transition: all .3s ease;
+        }
+        &::after {
+            content: "";
+            height: 0;
+            width: .2rem;
+            position: absolute;
+            display: inline-block;
+            background-color: $color-primary;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+             transition: height .3s ease;
+        }
+    }
+    &:hover span::before {
+        left: 50%;
+        width: 2rem;
+    }
+    &:hover span::after {
+        height: 2rem;
+    }
+
+    &--coral {
+         &::before {
+            background-color: #8bd4c2;
+         }
+    }
+    &--pink {
+        &::before {
+           background-color: #ffb8b0;
+        }
+   }
+   }

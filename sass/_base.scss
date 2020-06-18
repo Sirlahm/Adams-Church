@@ -1,0 +1,43 @@
+//VARIABLES DECLARATION
+$color-footer : #f1ede9;
+$color-secondary : #f7efee;
+$color-primary : #0b2149;
+
+$color-grey : #6f6f6f;
+$color-white : #fff;
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    // position: relative;
+    font-family: 'Josefin Sans';
+    color: $color-primary;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: $color-secondary;
+    color: $color-primary;
+}
+
+.container {
+    position: relative;
+    
+}
+main {
+    position: relative;
+    top: 12rem;
+    left: 0;
+}
