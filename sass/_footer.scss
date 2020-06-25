@@ -3,10 +3,18 @@
     &__container {
         padding: 10rem; 
         display: flex;
+         @media only screen and (max-width: $bp-med-small) {
+        flex-direction: column;
+        padding: 5rem;
+    }
         
     }
     &__column1{
         flex: 0 0 50%;
+        @media only screen and (max-width: $bp-med-small) {
+            flex-direction: column;
+           display: flex;
+        }
         
     }
     &__column2{
@@ -14,9 +22,16 @@
         display: flex;
         align-items: flex-end;
         flex-direction: column;
+        @media only screen and (max-width: $bp-med-small) {
+           margin-top: 5rem;
+           align-items: flex-start;
+        }
         div {
             &:not(:last-child)  {
                 margin-bottom: 12rem;
+                @media only screen and (max-width: $bp-med-small) {
+                    margin-bottom: 4rem;
+                }
             }
         }
         .div {
@@ -35,6 +50,10 @@
     &__info {
         display: flex;
         justify-content: space-between;
+        @media only screen and (max-width: $bp-med-small) {
+            flex-direction: column;
+            
+        }
         p {
             font-size: 2rem;
         }
@@ -44,12 +63,24 @@
     }
    &__end {
        margin-top: 8rem;
+       @media only screen and (max-width: $bp-med-small) {
+        margin-top: 5rem;
+    }
        .strong {
         font-size: 2rem;
        }
        .light {
         font-size: 1.5rem;
         margin-top: 3rem;
+        @media only screen and (max-width: $bp-med-small) {
+            margin-top: 0;
+        }
        }
    }
+}
+p {
+    font-size: 2rem;
+}
+.bold {
+    font-weight: bold;
 }

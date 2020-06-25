@@ -1,42 +1,76 @@
 .description{
 
     &__container{
-        padding:  0 10rem;
+        padding:  0 8.5rem;
         padding-bottom: 10rem;
         position: relative;
+        @media only screen and (max-width: $bp-med) {
+            padding: 0 4rem;
+            padding-bottom: 10rem;
+        }  
     }
     &__content {
   display: flex;
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
+}
     }
     &__rotate {
-   
+        @media only screen and (max-width: $bp-large) {
+            margin-bottom: 2rem;
+         }
     }
   &__details {
         flex: 1 0 0;
         margin-left: -3rem;
         display: flex;
         flex-direction: column;
+        @media only screen and (max-width: $bp-medium) {
+            margin-left: 0;
+        }
     }
    &__text {
        margin-bottom: 4rem;
    
    }
+   &__icon {
+    @media only screen and (max-width: $bp-less) {
+       flex: 0 0 18%;
+    }
+   }
    &__item{
        display: flex;
        align-items: center;
        justify-content: space-between;
+       @media only screen and (max-width: $bp-less) {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
 
        &:not(:last-child) {
         margin-bottom: 5rem;
+        @media only screen and (max-width: $bp-less) {
+            margin-bottom: 7rem;
+        }
        }
    }
    &__text2 {
          margin: 0 5rem;
+         @media only screen and (max-width: $bp-less) {
+            margin: 0;
+        }
 
     p {
        font-size: 2rem;
     }
    }
+   &__text3 {
+    
+
+p {
+  font-size: 2rem;
+}
+}
    &__img {
 
     height: 100%;
@@ -44,12 +78,19 @@
    width: 15rem;
    object-fit: cover;
    display: block;
+   @media only screen and (max-width: $bp-less) {
+    width: 100%;
+    
+}
    }
 
    &__image {
     position: absolute;
     left: 0;  
     top: -10rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 img {
        width: 17rem; 
        height: 100%;
@@ -61,13 +102,37 @@ img {
       
       
    }
-   
+   &__flex {
+       display: flex;
+       @media only screen and (max-width: $bp-small) {
+       flex-direction: column;
+    }
+      
+       &:not(:last-child) {
+        margin-bottom: 5rem;
+       }
+   }
+   &__info {
+    flex: 0 0 48%;
+       margin-top: 3rem;
+       &:not(:last-child) {
+           margin-right: 3rem;
+           @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+         }
+       }
+    //    display: flex;
+
+   }
 }
 .heading-3 {
     font-size: 2rem;
     font-weight: bold;
     transform: translateX(-50%) rotate(-90deg);
     transform-origin: 100% 0;
+    @media only screen and (max-width: $bp-medium) {
+        transform: translateX(0) rotate(0);
+    }
     
 }
 .heading-1{
@@ -144,4 +209,7 @@ img {
            background-color: #ffb8b0;
         }
    }
+   }
+   .paragraph {
+       margin-bottom: 2rem;
    }

@@ -8,6 +8,18 @@ $color-white : #fff;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+$bp-largest: 75.63em;     // 1200px
+$bp-larger: 68.75em;    // 1100px
+$bp-large: 62.5em;    // 1000px
+$bp-medium: 56.25em;  // 900px
+$bp-med: 50em;    //800px
+$bp-med-small: 43.75em; 
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+$bp-less: 25em; 
+$bp-lesser: 21.87em; 
+
+
 
 *,
 *::before,
@@ -20,10 +32,13 @@ $font-display: 'Josefin Sans', sans-serif;
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 }
 
 body {
-    // position: relative;
+    position: relative;
     font-family: 'Josefin Sans';
     color: $color-primary;
     font-weight: 300;
@@ -31,7 +46,9 @@ body {
     background-color: $color-secondary;
     color: $color-primary;
 }
-
+a,button {
+    cursor: pointer;
+}
 .container {
     position: relative;
     

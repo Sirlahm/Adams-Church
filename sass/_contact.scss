@@ -1,0 +1,166 @@
+.contact {
+
+    &__container {
+        display: flex;
+        padding: 7.5rem;  
+       padding-left: 7.5rem;
+       padding-bottom: 0;
+    }
+
+    &__details {
+        flex: 0 0 55%;
+
+        display: flex;
+        flex-direction: column;
+    }
+    &__img {
+        flex: 1;
+        align-self: flex-start;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+        font-weight: 400;
+
+        label {
+            margin-bottom: 1rem;
+        }
+
+        input,textarea {
+            font-family: 'Josefin Sans';
+            padding: 1.5rem;
+            border: none;
+            outline: none;  
+            font-size: 1.8rem;
+            
+            border-radius: .3rem;
+        }
+        
+    }
+    &__element {
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child) {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__select {
+        
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        font-family: Josefin sans;
+        cursor: pointer;
+        background: #fff;
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        color: $color-primary;
+        &:focus {
+            background-color: white;
+        }
+        option {
+            padding: 1.5rem;
+        // font-size: 1.5rem;
+            &:focus, &:active{
+                background-color: red;
+            }
+        }
+    }
+    &__radio-input {
+        display: none;
+    }
+    
+    &__label {
+        
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__label-radio {
+        height: 3.5rem;
+        width: 3.5rem;
+        background-color: white;
+        border-radius: 20%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 20%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            // transition: opacity .2s;
+        }
+    }
+    &__radio-input:checked ~ &__label &__label-radio::after {
+        opacity: 1;
+    }
+    &__button {
+        align-self: flex-start;
+
+        button {
+            padding: 1.5rem;
+
+        }
+        
+    }
+
+    &__box {
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        background-color: $color-primary;
+        color: #fff!important;
+        align-self: flex-end;
+        padding: 5rem;
+        @media only screen and (max-width: $bp-med) {
+            width: 100%;
+            margin-top: 8rem;
+        }
+
+        img {
+            width: 32rem;
+            height: 100%;
+            margin-top: -10rem;
+            padding-bottom: 4rem;  
+            @media only screen and (max-width: $bp-med) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.span {
+font-weight: bold;
+// position: relative;
+border-bottom: 2px solid #f59b9e;
+font-weight: 600;
+transition: border .3s ease;
+
+&:hover {
+    border: transparent;
+}
+}
+// .select-selected {
+//     background-color: #fff;
+//     // color: rgba(0, 0, 0, 0.8) !important;
+// }
+
+
+// select.decorated option:hover {
+//     box-shadow: 0 0 10px 100px #1882A8 inset;
+// }

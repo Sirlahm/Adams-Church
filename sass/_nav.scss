@@ -8,11 +8,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 6rem;
+        padding: 2rem 6rem;
+        height: 12rem;
+        @media only screen and (max-width: $bp-largest) {
+            padding: 3rem;
+        }
 
     }
     &__white {
         background-color: white;
+        
     }
     &__logo {
            position: relative;
@@ -38,8 +43,152 @@
     }
     &__menu {
         margin-left: -2rem;
+        @media only screen and (max-width: $bp-largest) {
+            display: none;
+        }
+    }
+    &-toggle {
+        position: relative;
+        flex: 0 0 10%;
+        height: 4rem;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        @media only screen and (min-width: $bp-largest) {
+            display: none;
+        }
+        &__line1 {
+            position: absolute;
+            border: 3px solid #0b2149;
+            height: 2rem;
+            width: 6rem;
+            display: inline-block;
+            top: 0;
+            right: 2rem;
+            transition: all .3s ease;
+        }
+        &__line1-change {
+            position: absolute;
+            border: 3px solid #0b2149;
+            height: 2rem;
+            width: 6rem;
+            display: inline-block;
+            top: 0;
+            right: 2rem;
+            transform: rotate(-45deg);
+            transition: all .3s ease;
+
+        }
+        &__line2 {
+            position: absolute;
+            border: 3px solid #0b2149;
+            height: 2rem;
+            width: 6rem;
+            display: inline-block;
+            top: 2rem;
+            right: 2rem;
+            transition: all .3s ease;
+
+        }
+        &__line2-change {
+            position: absolute;
+            border: 3px solid #0b2149;
+            height: 2rem;
+            width: 6rem;
+            display: inline-block;
+            // top: 2rem;
+            right: 2rem;
+            transform: rotate(45deg);
+        top: 0; 
+        transition: all .3s ease;
+
+        }
+    }
+    &__button {
+        @media only screen and (max-width: $bp-largest) {
+            display: none;
+        }
+    }
+    &-toggle:focus &-toggle__line1-change {
+        transform: rotate(-45deg);
+    }
+    &-toggle:focus &-toggle__line2-change {
+        transform: rotate(45deg);
+        top: 0; 
+    }
+    &-toggle:focus &-toggle__line1 {
+        transform: rotate(0);
+    }
+    &-toggle:focus &-toggle__line2 {
+        transform: rotate(0);
+        top: 2rem; 
+    }
+     &-hidden {
+         display: none;
+     }
+    &-slide {
+       background-color: #fff;
+       
+       @media only screen and (min-width: $bp-largest) {
+        display: none;
+    }
+       
+       
+        &__container {
+          padding: 10rem;
+          display: flex;  
+          height: calc(100vh - 9rem);
+          @media only screen and (max-width: $bp-smallest) {
+            padding: 4rem;
+            flex-direction: column;
+        }
+        }
+        &__flex {
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-between;
+            flex: 1;
+
+            a {
+                font-size: 3rem!important;
+                margin-bottom: 3rem;
+                @media only screen and (max-width: $bp-smallest) {
+                    font-size: 2rem!important;
+                }
+
+            }
+            
+        }
+
+        &__btn {
+            flex: 0 0 40%;
+            display: flex;
+
+
+            a {
+                font-size: 2rem;
+            }
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .link {
 
@@ -66,7 +215,8 @@
     border: 2.5px solid $color-primary;  
     font-weight: bold;
     border-radius: .5rem;  
-    position: relative;  
+    position: relative; 
+    z-index: 90;
     &:not(:last-child) {
         margin-right: 2rem; 
     }
@@ -95,6 +245,9 @@
     &--blue {
         
         color: white;
+        z-index: 10;
+        background: transparent;
+    font-family: 'Josefin sans';
          &::after{
             background-color: $color-primary;
             height: 100%;
@@ -114,7 +267,7 @@
 .btn--white {
     border: 2.5px solid white;
     color: $color-primary;   
-    z-index: 1;
+    z-index: 10;
     padding: 1.5rem 3.5rem;
     overflow: hidden;
      &::after{
@@ -132,5 +285,22 @@
     &:hover {
         color: white;
         
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
+    80% {
+        opacity: 0.8;
+        // transform: translateY(-100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
     }
 }

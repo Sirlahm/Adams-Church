@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="nav__container ">
+            
+                 <a href="#" class="nav__logo" >
+                     <svg class="nav__icon">
+                         <use xlink:href="img/sprite.svg#icon-home"></use>
+                     </svg>
+                     <span>ADAMS CHURCH</span>
+                 </a>
+              
+                <div class="nav__menu">
+                    <a href="#" class="link">WHAT WE DO</a>
+                    <a href="#" class="link">WHAT WE ARE</a>
+                    <a href="#" class="link">RIGHT TO MANAGE</a>
+                    <a href="#" class="link">SELF MANAGED</a>
+                    <a href="#" class="link">PARTNERSHIPS</a>
+                    <a href="#" class="link">CONTACT</a>
+                </div>
+                <div class="nav__button">
+                    <a href="" class="btn">REPORT A REPAIR</a>
+                </div>
+                <button class="nav-toggle">
+               
+                    <span class="nav-toggle__line1 button-change1"></span>
+                    <span class="nav-toggle__line2 button-change"></span>
+                   </button>
+            </div>
+            <div class="nav-slide nav-hidden " id="slidemenu">
+                <div class="nav-slide__container">
+                    <div class="nav-slide__flex">
+                      <a href="whatwedo.html" class="link">WHAT WE DO</a>
+                      <a href="whoweare.html" class="link">WHO WE ARE</a>
+                      <a href="righttomanage.html" class="link">RIGHT TO MANAGE</a>
+                      <a href="selfmanaged.html" class="link">SELF MANAGED</a>
+                      <a href="partner.html" class="link">PARTNERSHIPS</a>
+                      <a href="contact.html" class="link">CONTACT</a>
+                    </div>
+                    <div class="nav-slide__btn">
+                      <a href="contact.html" class="link">Report A Repair</a>
+                    </div>
+                </div>
+             </div>
+
+            
+        </nav>
+        <main>
+            <section class="header">
+                <div class="header__container">
+                    <div class="contact__details">  
+                        <p class="paragraph1">CONTACT US
+                        </p>
+                        <p class="paragraph2">Looking for smarter block management?</p>
+                        <p class="paragraph-large margin-bottom-large">Questions, thoughts, or just want to say hello? </p> 
+                        <form action="#" class="contact__form">
+                            <div class="contact__element">
+                                <label for="name">Name</label>
+                                 <input placeholder="" type="text"id="name" required>
+                            </div>
+                            <div class="contact__element">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="contact__element">
+                                <label >How Can We Help You</label>
+                            <select class="contact__select" data-placeholder= "hfhfh" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                                    <option disabled selected>Please Select...</option>
+                                    <option>General</option>
+                                    <option >Right To Managed</option>
+                                    <option >Fully Managed</option>
+                                    <option >Year End Accounts</option>
+                                    <option >Health & Safety</option>
+                            </select>
+                      
+                            </div>
+                            
+                            <div class="contact__element">
+                                <label for="text">Message</label>
+                                  <textarea  name="" id="text"  rows="8"></textarea>
+
+                            </div>
+                            <div class="contact__element">
+                                <input type="checkbox" class="contact__radio-input" id="radio" >
+                                <label for="radio" class="contact__label">
+                                    <span class="contact__label-radio"></span>
+                                    Have you read our <span class="span">Privacy Policy?</span> 
+                                </label>
+                            </div>
+
+                          <div class="contact__element contact__button">
+                            <button class="btn btn--blue">SEND US MESSAGE</button>
+                          </div>
+                            
+                        </form>
+            
+                        
+            
+                    </div>
+                    <div class="header__img">
+                        <div class="contact__box">
+                            <img src="https://wj4ks8qdfs-flywheel.netdna-ssl.com/wp-content/uploads/2020/05/contact-358x321.png" alt="">
+                                <div class="footer__location margin-bottom-small">
+                                    <p class="bold">Bristol Based</p>      
+                                    <p>256 Southmead Rd</p> 
+                                       <p>Bristol</p>  
+                                       <p>BS10 5EN</p>  
+                                </div>
+                                <div class="footer__enquire">
+                                 <p class="bold">Enquiries</p>   
+                                 <p>0117 373 9770</p> 
+                                    <p>info@adamchurch.co.uk</p>
+                 
+                                </div>
+                            
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            
+            <section class="footer">
+                <div class="footer__container">
+                    <div class="footer__column1">
+                       <div class="footer__info">
+                           <div class="footer__location">
+                               <p class="bold">Location</p>      
+                               <p>256 Southmead Rd</p> 
+                                  <p>Bristol</p>  
+                                  <p>BS10 5EN</p>  
+                           </div>
+                           <div class="footer__enquire">
+                            <p class="bold">Enquiries</p>   
+                            <p>0117 373 9770</p> 
+                               <p>info@adamchurch.co.uk</p>
+            
+                           </div>
+                       
+                       </div>
+                       <div class="footer__end">
+                           <p class="strong">
+                            © 2020 Adam Church Limited Privacy Policy
+                            </p>
+                            <p class="light"> Adam Church Limited is authorised and regulated by the Financial Conduct Authority (FCA).</p>
+                        
+                        </div>
+                    </div>
+            
+            
+            
+                    <div class="footer__column2">
+                        <div>
+                            <a href="" class="footer__link">   
+                                <img src="https://wj4ks8qdfs-flywheel.netdna-ssl.com/wp-content/uploads/2020/05/logo-the-property-ombudsman-240x70.png" alt="">
+                            </a>
+                        </div>
+                        <div class="div">
+                                <a href="" class="link">Privacy Policy</a>
+                                <a href="" class="link">Crafted by SirLahm</a>
+                         </div>
+                          
+                        
+                      
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
