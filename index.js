@@ -48,6 +48,10 @@ document.querySelector('.nav-toggle').addEventListener('click', function(){
   document.querySelector('.button-change1').classList.toggle('nav-toggle__line1-change');
   document.querySelector('.button-change').classList.toggle('nav-toggle__line2-change');
   document.querySelector('.nav__container').classList.toggle('nav__white');
+  document.querySelector('.nav').classList.toggle('nav__white');
+  // document.querySelector('.main').classList.toggle('nav-hidden');
+
+
   // document.querySelector('.nav__container').style.backgroundColor = "white";
 
   const element = document.querySelector("#slidemenu");
@@ -56,6 +60,7 @@ document.querySelector('.nav-toggle').addEventListener('click', function(){
       document.querySelector('.body').style.overflow = 'visible';
 } else {
   document.querySelector('.body').style.overflow = 'hidden';
+  document.querySelector('.body').style.webkitOverflow = 'hidden';
 
 }
 
@@ -66,7 +71,8 @@ let prevScrollpos = window.pageYOffset;
     let currentScrollPos = window.pageYOffset;
 
    if (prevScrollpos > currentScrollPos  ) {
-    if (currentScrollPos === 0 || prevScrollpos === 0 ) {
+     console.log(currentScrollPos)
+    if (currentScrollPos <= 15 || prevScrollpos <= 15 ) {
       document.querySelector('.nav').style.top = "0";
       document.querySelector('.nav__container').classList.remove("nav__white");
       document.querySelector('.nav__container').style.height = "12rem";
