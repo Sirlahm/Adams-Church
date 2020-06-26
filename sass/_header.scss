@@ -10,13 +10,17 @@
        padding: 7rem;
        flex-direction: column;
     }
-    @media only screen and (max-width: $bp-smallest) {
+    @media only screen and (max-width: $bp-small) {
         padding: 5rem;
-        flex-direction: column;
+       
+     }
+     @media only screen and (max-width: $bp-smallest) {
+        padding: 3rem;
+        
      }
      @media only screen and (max-width: $bp-less) {
         padding: 2rem;
-        flex-direction: column;
+        
      }
     }
 

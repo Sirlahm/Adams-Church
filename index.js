@@ -1,46 +1,46 @@
 
-// ScrollReveal().reveal('.description__image', {
-//   delay: 500,
-//   duration: 2000,
-//   reset: true,
-//   distance: '50px',
-//    origin: 'left' 
-// });
-// ScrollReveal().reveal('.description2__details2-animation1', {
-//   delay: 1000,
-//   duration: 2500,
-//   reset: true,
-//   distance: '50px',
-//    origin: 'left' 
-// });
-// ScrollReveal().reveal('.description2__img1', {
-//   delay: 1000,
-//   duration: 3500,
-//   reset: true,
-//   distance: '50px',
-//    origin: 'bottom' 
-// });
-// ScrollReveal().reveal('.description2__details2-animation2', {
-//   delay: 1000,
-//   duration: 2500,
-//   reset: true,
-//   distance: '50px',
-//    origin: 'right' 
-// });
-// ScrollReveal().reveal('.description2__img2', {
-//   delay: 1000,
-//   duration: 3500,
-//   reset: true,
-//   distance: '50px',
-//    origin: 'top' 
-// });
-// ScrollReveal().reveal('.cta__img', {
-//   delay: 1000,
-//   duration: 4000,
-//   reset: true,
-//   distance: '50px',
-//    origin: 'right' 
-// });
+ScrollReveal().reveal('.description__image', {
+  delay: 500,
+  duration: 2000,
+  reset: true,
+  distance: '50px',
+   origin: 'left' 
+});
+ScrollReveal().reveal('.description2__details2-animation1', {
+  delay: 500,
+  duration: 1500,
+  reset: true,
+  distance: '50px',
+   origin: 'left' 
+});
+ScrollReveal().reveal('.description2__img1', {
+  delay: 300,  
+  duration: 1500,
+  reset: true,
+  distance: '50px',
+   origin: 'bottom' 
+});
+ScrollReveal().reveal('.description2__details2-animation2', {
+  delay: 700,
+  duration: 1500,
+  reset: true,
+  distance: '50px',
+   origin: 'right' 
+});
+ScrollReveal().reveal('.description2__img2', {
+  delay: 700,
+  duration: 1500,
+  reset: true,
+  distance: '50px',
+   origin: 'bottom' 
+});
+ScrollReveal().reveal('.cta__img', {
+  delay: 1000,
+  duration: 4000,
+  reset: true,
+  distance: '50px',
+   origin: 'right' 
+});
 document.querySelector('.nav-toggle').addEventListener('click', function(){
   document.querySelector('.nav-slide').classList.toggle('nav-hidden');
   document.querySelector('.button-change1').classList.toggle('nav-toggle__line1');

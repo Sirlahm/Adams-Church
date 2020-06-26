@@ -11,7 +11,13 @@
         padding: 2rem 6rem;
         height: 12rem;
         @media only screen and (max-width: $bp-largest) {
+            padding: 4rem;
+        }
+        @media only screen and (max-width: $bp-large) {
             padding: 3rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 1.5rem;
         }
 
     }
@@ -149,7 +155,7 @@
             // justify-content: space-between;
             flex: 1;
             @media only screen and (max-width: $bp-smallest) {
-                margin-bottom: 4rem;
+                margin-bottom: 2rem;
             }
             
 
@@ -168,6 +174,9 @@
         &__btn {
             flex: 0 0 40%;
             display: flex;
+            @media only screen and (max-width: $bp-smallest) {
+                margin-top: 5rem;
+            }
 
 
             a {
